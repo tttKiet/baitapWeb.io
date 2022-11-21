@@ -11,6 +11,7 @@
   top: 0;
   border-bottom: 1px solid #ccc;
   z-index: 10000;
+  transition: all linear 0.3s;
 }
 
 .header_container {
@@ -179,6 +180,11 @@
 
 .slide_move {
   z-index: 1;
+}
+
+li:hover a {
+  color: rgb(41, 41, 241);
+  transition: all linear 0.2s;
 }
 
 #video_bg {
