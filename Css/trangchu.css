@@ -10,7 +10,7 @@
   position: fixed;
   top: 0;
   border-bottom: 1px solid #ccc;
-  z-index: 2;
+  z-index: 10000;
 }
 
 .header_container {
@@ -27,9 +27,13 @@
   color: var(--text-color-while);
 }
 
+.logo:hover {
+  opacity: 0.8;
+}
+
 .logo > img {
   object-fit: contain;
-  height: 60px;
+  height: 50px;
   padding: 8px 16px 8px 16px;
   margin-left: -16px;
 }
@@ -158,4 +162,81 @@
 
 .description_content ~ .description_content {
   margin-top: 15px;
+}
+
+/* main */
+/* carousel */
+
+.carousel_main {
+  z-index: 1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.slide_move {
+  z-index: 1;
+}
+
+#video_bg {
+  opacity: 0.9;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -11;
+}
+
+.h-140 {
+  object-fit: cover;
+  height: 140px;
+}
+
+/* gioi thieu */
+.form-g {
+  display: flex;
+}
+
+.form-g-col {
+  display: flex;
+}
+
+.logo-school {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.title-header {
+  display: inline-block;
+  font-size: 2.6rem;
+  color: var(--text-color-while);
+  text-align: center;
+}
+
+.title-header > p {
+  display: inline-block;
+}
+
+.content-title {
+  font-size: 1.4rem;
+  color: var(--text-color-while);
+  list-style: 1.8rem;
+  letter-spacing: 1px;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.bg-content-title {
+  padding: 15px;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.bg-content-title .title-header,
+.bg-content-title .content-title {
+  color: black;
 }
