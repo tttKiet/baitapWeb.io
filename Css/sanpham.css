@@ -19,7 +19,7 @@ main {
   outline: none;
   background-color: #f3f3f3;
   margin: 0 20px;
-  color: 1.4rem;
+  font-size: 1.4rem;
   /* left: 50%; */
   /* transform: translateX(-50%); */
   transition: all ease-out 2.5s;
@@ -29,6 +29,7 @@ main {
 
 .search-icon {
   transition: all ease-out 2.5s;
+  margin: 0 20px;
 }
 
 .group-search {
@@ -54,14 +55,14 @@ main {
 
 .group-search .btn-sm.rm-icon {
   position: absolute;
-  top: 50%;
-  right: 31%;
   padding: 0;
+  top: 50%;
+  left: calc(50% + 160px);
+  transform: translate(-100%, -50%);
   min-width: 32px;
-  transform: translate(-50%, -50%);
   font-size: 8px;
   height: 22px;
-  border: 1px solid #000;
+  background-color: none;
 }
 
 .search::placeholder {
@@ -72,6 +73,29 @@ main {
   line-height: 1.4rem;
 }
 
+.icon_search-ok {
+  position: absolute;
+  padding: 0;
+  top: 50%;
+  left: calc(50% + 124px);
+  transform: translate(-100%, -50%);
+  min-width: 32px;
+  font-size: 8px;
+  height: 22px;
+}
+
+.icon_search-ok::before {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -2px;
+  border-right: 1px solid #ccc;
+}
+
 .btn-sm + .btn-sm {
-  margin-left: 20px;
+}
+
+.btn-sm:last-child {
 }
