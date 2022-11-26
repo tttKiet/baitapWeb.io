@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./Css/GlobalStyle.css" />
     <link rel="stylesheet" href="./Css/root.css" />
     <link rel="stylesheet" href="./Css/trangchu.css" />
+    <link rel="stylesheet" href="./Css/sanpham.css" />
   </head>
   <body>
     <div class="app">
@@ -84,283 +85,36 @@
 
           <!-- Gioi thieu -->
           <div class="intro">
-            <h1 class="nameweb">Đồ Gia Dụng Việt Nam</h1>
-            <p class="dis">Free ship toàn quốc</p>
-          </div>
-
-          <!-- Mo ta -->
-          <div class="description">
-            <!-- su dung bootchap -->
-            <div class="container px-4 rounded text-center">
-              <div class="row gx-5">
-                <div class="col">
-                  <div class="p-3 border des-cus">
-                    <span class="description_content">
-                      Đồ gia dụng mini là những sản phẩm gọn nhẹ, dễ sử dụng và
-                      tiết kiệm điện năng. Đối với sinh viên thì ngoài dụng cụ
-                      học tập ra thì đồ gia dụng nấu ăn cũng quan trọng không
-                      kém.
-                    </span>
-                    <span class="description_content">
-                      Ông bà ta có câu “Có thực mới vực được đạo”. Chính vì thế
-                      để có sức khỏe tốt nhất cho việc học tập thì ăn uống phải
-                      đảm bảo.
-                    </span>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="">
-                    <img
-                      class="w-100 rounded border"
-                      src="./assets/imgs/anh1.jpg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h1 class="nameweb">Danh mục sản phẩm</h1>
+            <p class="dis">- Các sản phẩm được bán lại( --)</p>
           </div>
         </header>
         <main>
-          <!-- Carousel dung bootchap-->
-          <div class="carousel_main">
-            <!-- back video -->
-            <video autoplay id="video_bg" loop="loop" muted volumn="0">
-              <source src="./assets/video/videobg2.mp4" />
-            </video>
-            <!--  -->
-            <div class="row container" style="align-items: center">
-              <div class="col-sm-6">
-                <div
-                  id="carouselExampleDark"
-                  class="carousel slide_move carousel-dark slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-indicators">
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleDark"
-                      data-bs-slide-to="0"
-                      class="active"
-                      aria-current="true"
-                      aria-label="Slide 1"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleDark"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 2"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleDark"
-                      data-bs-slide-to="2"
-                      aria-label="Slide 3"
-                    ></button>
-                  </div>
-                  <div class="carousel-inner border rounded border-white">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                      <img
-                        src="./assets/imgs/2.jpg"
-                        class="d-block w-100"
-                        alt="..."
-                      />
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>
-                          Some representative placeholder content for the first
-                          slide.
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="carousel-item border rounded border-white"
-                      data-bs-interval="2000"
-                    >
-                      <img
-                        src="./assets/imgs/2.jpg"
-                        class="d-block w-100"
-                        alt="..."
-                      />
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>
-                          Some representative placeholder content for the second
-                          slide.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="carousel-item border rounded border-white">
-                      <img
-                        src="./assets/imgs/2.jpg"
-                        class="d-block w-100"
-                        alt="..."
-                      />
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>
-                          Some representative placeholder content for the third
-                          slide.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleDark"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      class="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleDark"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      class="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <!-- mo ta noi dung -->
-                <div class="row mb-4">
-                  <div class="col-6">
-                    <img
-                      src="./assets/imgs/1.jpg"
-                      class="w-100 h-140 d-block border rounded border-white"
-                      alt=""
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Sao Thủy - Mercury"
-                    />
-                  </div>
-                  <div class="col-6">
-                    <img
-                      src="./assets/imgs/2.jpg"
-                      class="w-100 h-140 d-block border rounded border-white"
-                      alt=""
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Sao Thủy - Mercury"
-                    />
-                  </div>
-                </div>
+          <div class="container nav_product">
+            <button class="btn-sm">
+              <i class="uil uil-filter icon"></i>
+            </button>
 
-                <div class="row">
-                  <div class="col-6">
-                    <img
-                      src="./assets/imgs/3.jpg"
-                      class="w-100 h-140 d-block border rounded border-white"
-                      alt=""
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="bottom"
-                      title="Sao Thủy - Mercury"
-                    />
-                  </div>
+            <button class="btn-sm search-icon">
+              <i class="uil uil-search icon"></i>
+            </button>
+            <div class="group-search">
+              <input
+                type="text"
+                placeholder="Nhập tên sản phẩm ..."
+                class="search"
+              />
 
-                  <div class="col-6">
-                    <img
-                      src="./assets/imgs/3.jpg"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="right"
-                      title="Sao Thủy - Mercury"
-                      class="w-100 h-140 d-block border rounded border-white"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
+              <button class="btn-sm rm-icon">
+                <i class="uil uil-multiply icon"></i>
+              </button>
             </div>
-            <!-- Gioi thieu -->
-            <div class="row form-g p-4 mt-5 container border border-white">
-              <div class="col-sm-4 form-g-col">
-                <img
-                  class="logo-school"
-                  src="./assets/imgs/1024px-Logo_Dai_hoc_Can_Tho.svg.png"
-                />
-              </div>
-              <div class="col-sm-8">
-                <div class="row">
-                  <h1 class="title-header"><p>Giới Thiệu</p></h1>
-                </div>
-                <div class="row">
-                  <span class="content-title">
-                    Hiện nay sự xuất hiện các món đồ gia dụng ở trong gia đình
-                    của mỗi người là rất phổ biến. Nhận thức được điều này, nhóm
-                    05 đã tạo ra một website mà tại đây mọi người có thể dễ dàng
-                    tìm kiếm được những món đồ phù hợp cho gia đình của mình.
-                    Với giao diện trực quan, bắt mắt và kho hàng đa dạng. Nhóm
-                    05 hy vọng website sẽ phát triển hơn nữa trong tương lai và
-                    là một phần trong các gia đình của mọi người.
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!--  -->
-          <div class="container mt-5 bg-content-title">
-            <div class="row">
-              <h1 class="title-header"><p>Xoong, nồi, chảo</p></h1>
-            </div>
-            <div class="row">
-              <span class="content-title">
-                Đầu tiên phải kể đến dụng cụ cần chuẩn bị cho căn bếp đó là
-                xoong, nồi, chảo, nồi cơm điện giúp các bạn chuẩn bị các bữa ăn
-                trong ngày, đảm bảo được ăn ngon và an toàn vệ sinh thực phẩm
-                với các món ăn tự chế biến.
-              </span>
-            </div>
+            <button class="btn-sm more">
+              <i class="uil uil-ellipsis-v icon"></i>
+            </button>
           </div>
-          <div class="container mt-5 bg-content-title">
-            <div class="row">
-              <h1 class="title-header"><p>Xoong, nồi, chảo</p></h1>
-            </div>
-            <div class="row">
-              <span class="content-title">
-                Đầu tiên phải kể đến dụng cụ cần chuẩn bị cho căn bếp đó là
-                xoong, nồi, chảo, nồi cơm điện giúp các bạn chuẩn bị các bữa ăn
-                trong ngày, đảm bảo được ăn ngon và an toàn vệ sinh thực phẩm
-                với các món ăn tự chế biến.
-              </span>
-            </div>
-          </div>
-          <div class="container mt-5 bg-content-title">
-            <div class="row">
-              <h1 class="title-header"><p>Xoong, nồi, chảo</p></h1>
-            </div>
-            <div class="row">
-              <span class="content-title">
-                Đầu tiên phải kể đến dụng cụ cần chuẩn bị cho căn bếp đó là
-                xoong, nồi, chảo, nồi cơm điện giúp các bạn chuẩn bị các bữa ăn
-                trong ngày, đảm bảo được ăn ngon và an toàn vệ sinh thực phẩm
-                với các món ăn tự chế biến.
-              </span>
-            </div>
-          </div>
-          <div class="container mt-5 bg-content-title">
-            <div class="row">
-              <h1 class="title-header"><p>Xoong, nồi, chảo</p></h1>
-            </div>
-            <div class="row">
-              <span class="content-title">
-                Đầu tiên phải kể đến dụng cụ cần chuẩn bị cho căn bếp đó là
-                xoong, nồi, chảo, nồi cơm điện giúp các bạn chuẩn bị các bữa ăn
-                trong ngày, đảm bảo được ăn ngon và an toàn vệ sinh thực phẩm
-                với các món ăn tự chế biến.
-              </span>
-            </div>
-          </div>
+          <div class="container root_product"></div>
         </main>
 
         <!-- Footer -->
@@ -519,15 +273,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- tooltips -->
-    <script>
-      var tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      );
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    </script>
     <script src="./Js/index.js"></script>
+    <script src="./Js/sanpham.js"></script>
   </body>
 </html>

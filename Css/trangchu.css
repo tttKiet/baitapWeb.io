@@ -9,7 +9,6 @@
   justify-content: center;
   position: fixed;
   top: 0;
-  border-bottom: 1px solid #ccc;
   z-index: 10000;
   transition: all linear 0.3s;
 }
@@ -25,7 +24,8 @@
 
 .logo {
   text-decoration: none;
-  color: var(--text-color-while);
+  background-color: rgba(0, 0, 0, 0.434);
+  border-radius: 16px 8px 16px 8px;
 }
 
 .logo:hover {
@@ -35,8 +35,7 @@
 .logo > img {
   object-fit: contain;
   height: 50px;
-  padding: 8px 16px 8px 16px;
-  margin-left: -16px;
+  padding: 8px;
 }
 
 .navbar {
@@ -88,6 +87,14 @@
   border-top: 1px solid var(--text-color-while);
   transition: all linear 0.4s;
   width: 90%;
+}
+
+.before_border_black.item-link::before {
+  border-top: 2px solid #000;
+}
+
+.before_border_black.item-link::after {
+  border-left: 2px solid #000;
 }
 
 .item-link::after {
@@ -245,4 +252,12 @@ li:hover a {
 .bg-content-title .title-header,
 .bg-content-title .content-title {
   color: black;
+}
+
+/* container của phần giới thiệu */
+.border_body {
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px 5px #ccc;
+  margin: 40px auto;
+  padding: 10px 22px 20px 22px;
 }

@@ -1,0 +1,77 @@
+main {
+  background-image: linear-gradient(45deg, #ccc, #000, transparent);
+  padding: 20px 0;
+}
+
+.root_product {
+  border: 1px solid #fff;
+}
+
+.nav_product {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.search {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: #f3f3f3;
+  margin: 0 20px;
+  color: 1.4rem;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  transition: all ease-out 2.5s;
+  min-width: 340px;
+  /* visibility: hidden; */
+}
+
+.search-icon {
+  transition: all ease-out 2.5s;
+}
+
+.group-search {
+  display: flex;
+  flex: 1;
+  padding: 0 20px 0 20px;
+  justify-content: center;
+  overflow: hidden;
+  transition: all ease-out 2.5s;
+  animation: showElement linear 0.3s;
+  position: relative;
+  display: none;
+}
+
+@keyframes showElement {
+  0% {
+    margin-left: -50px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+.group-search .btn-sm.rm-icon {
+  position: absolute;
+  top: 50%;
+  right: 31%;
+  padding: 0;
+  min-width: 32px;
+  transform: translate(-50%, -50%);
+  font-size: 8px;
+  height: 22px;
+  border: 1px solid #000;
+}
+
+.search::placeholder {
+  color: rebeccapurple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.4rem;
+}
+
+.btn-sm + .btn-sm {
+  margin-left: 20px;
+}
