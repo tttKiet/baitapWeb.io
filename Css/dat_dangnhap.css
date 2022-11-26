@@ -1,0 +1,8 @@
+.root {
+  display: flex;
+}
+
+.header_dangnhap {
+  width: var(--width-global);
+  margin: 0 auto;
+}
