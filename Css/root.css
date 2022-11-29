@@ -4,4 +4,9 @@
   --primary-color: #ff8787;
   /* D8D9CF, E26868 */
   --width-global: 1140px;
+
+  --white-light: rgba(255, 255, 255, 0.5);
+  --alice-blue: #f8f9fa;
+  --carribean-green: #40c9a2;
+  --gray: #ededed;
 }
