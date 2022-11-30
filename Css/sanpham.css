@@ -61,11 +61,16 @@ main {
 }
 
 .search::placeholder {
-  color: rebeccapurple;
+  color: var(--carribean-green);
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 1.4rem;
+}
+
+.group-search .btn-sm:hover {
+  background-color: var(--carribean-green);
+  color: #fff;
 }
 
 .icon_search-ok {
@@ -79,6 +84,10 @@ main {
   height: 22px;
 }
 
+.btn-sm {
+  padding: 6px 8px;
+}
+
 .icon_search-ok::before {
   content: "";
   display: block;
@@ -87,12 +96,6 @@ main {
   top: 0;
   right: -2px;
   border-right: 1px solid #ccc;
-}
-
-.btn-sm + .btn-sm {
-}
-
-.btn-sm:last-child {
 }
 
 /* Sản phẩm */

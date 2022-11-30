@@ -25,7 +25,6 @@ const app = () => {
 
     // Xu lu scroll cho header
     if (yScroll >= 660) {
-      console.log(navHeader.style);
       navHeader.style.opacity = "0";
     } else if (yScroll >= 36) {
       navHeader.style.opacity = "1";
