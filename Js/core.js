@@ -5,48 +5,33 @@ const html = ([first, ...strings], ...values) => {
     .join("");
 };
 
-const initProduct = [
-  {
-    id: 1,
-    name: "Cái bàn học",
-    src: "../assets/imgs/3.jpg",
-    description: "Đây là mô tả cảu cái bàn",
-    type: "DO_NHA_BEP",
-    rootPrice: "200000",
-    price: "180000",
-    star: "4",
-  },
-  {
-    id: 2,
-    name: "Cái bàn học",
-    src: "../assets/imgs/bg4.jpg",
-    description: "Đây là mô tả cảu cái bàn",
-    type: "DO_NHA_BEP",
-    rootPrice: "200000",
-    price: "160000",
-    star: "4",
-  },
-  {
-    id: 3,
-    name: "Cái bàn học",
-    src: "../assets/imgs/background_header.jpg",
-    description: "Đây là mô tả cảu cái bàn",
-    type: "DO_NHA_BEP",
-    rootPrice: "208000",
-    price: "160000",
-    star: "4",
-  },
-  {
-    id: 3,
-    name: "Cái Ghe học",
-    src: "../assets/imgs/anh1.jpg",
-    description: "Đây là mô tả cảu cái bàn",
-    type: "DO_NHA_BEP",
-    rootPrice: "408000",
-    price: "160000",
-    star: "5",
-  },
-];
+const createStore = (reducer) => {
+  let state = reducer({});
+  const roots = new Map();
 
-export { html };
-export default initProduct;
+  // rennder ra du lieu
+  const render = () => {
+    for (const [root, component] of roots) {
+      const output = component();
+      root.innerHTML = output;
+    }
+  };
+
+  return {
+    attach(component, root) {
+      roots.set(root, component);
+      render();
+    },
+    connect(selector = (state) => state) {
+      return (component) =>
+        (props, ...args) =>
+          component(Object.assign({}, props, selector(state), ...args));
+    },
+    dispatch(action, ...args) {
+      state = reducer({ action, args });
+      render();
+    },
+  };
+};
+
+export { html, createStore };

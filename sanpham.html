@@ -13,6 +13,10 @@
     <!-- icon -->
     <link
       rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
 
@@ -101,19 +105,39 @@
             </p>
           </div>
           <div class="container nav_product">
-            <button class="btn-sm" title="Lọc">
+            <button class="btn-sm btn-filter" title="Lọc">
               <i class="uil uil-filter icon"></i>
+
+              <ul class="menu_filter">
+                <li class="menu_filter-link btn-type">
+                  <span>Theo loại </span>
+                  <ul class="menu_type">
+                    <li data-type="1" class="">Đồ bếp</li>
+                    <li data-type="2" class="">Dụng cụ học tập</li>
+                    <li data-type="3" class="">Đồ trang trí</li>
+                  </ul>
+                </li>
+                <li class="menu_filter-link btn-price">
+                  <span>Theo giá </span>
+                </li>
+                <li class="menu_filter-link btn-star">
+                  <span>Theo đánh giá</span>
+                </li>
+              </ul>
             </button>
 
             <button class="btn-sm search-icon" title="Tìm Kiếm">
               <i class="uil uil-search icon"></i>
             </button>
             <div class="group-search">
-              <input
-                type="text"
-                placeholder="Nhập tên sản phẩm ..."
-                class="search"
-              />
+              <form class="form-input">
+                <input
+                  type="text"
+                  placeholder="Nhập tên sản phẩm ..."
+                  class="search"
+                />
+                <span class="error"> </span>
+              </form>
 
               <button class="btn-sm rm-icon">
                 <i class="uil uil-multiply icon"></i>
@@ -287,7 +311,6 @@
     </div>
     <!-- icon scout  -->
     <script src="https://unicons.iconscout.com/release/v4.0.0/script/monochrome/bundle.js"></script>
-
     <script src="./Js/index.js"></script>
     <script src="./Js/sanpham.js" type="module"></script>
     <!-- <script src="./Js/core.js"></script> -->
