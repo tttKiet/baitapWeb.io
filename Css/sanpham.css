@@ -109,20 +109,48 @@ main {
   border-radius: 4px;
   border: 1px solid transparent;
   outline: none;
+  width: 212px;
   height: 100%;
-  background-color: #f3f3f3;
-  margin: 0 20px;
+  background-color: transparent;
   font-size: 1.4rem;
   /* left: 50%; */
   /* transform: translateX(-50%); */
   transition: all ease-out 2.5s;
-  min-width: 340px;
   /* visibility: hidden; */
+  border-radius: 4px;
+}
+
+.container-search {
+  height: 100%;
+}
+
+#delete-input {
+  position: absolute;
+  right: 84px;
+  top: 50%;
+  transform: translateY(calc(-50%));
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 4px;
+  line-height: 100%;
+}
+
+#delete-input:active {
+  text-shadow: 1px 1px 5px red;
 }
 
 .search-icon {
   transition: all ease-out 2.5s;
   margin: 0 20px;
+}
+
+.wrap.search-wrap {
+  min-width: 340px;
+  background-color: var(--gray);
+  height: 34px;
+  border-radius: 4px;
+  position: relative;
 }
 
 .group-search {
@@ -134,6 +162,7 @@ main {
   transition: all ease-out 2.5s;
   animation: showElement linear 0.3s;
   position: relative;
+  border-radius: 4px;
   display: none;
 }
 
@@ -173,6 +202,7 @@ main {
 
 .form-input {
   position: relative;
+  height: 100%;
 }
 
 .error {
@@ -264,6 +294,8 @@ main {
 
 .sm-title {
   margin: 0;
+  font-size: 1.4rem;
+  user-select: none;
 }
 
 .text-lights {
@@ -375,7 +407,7 @@ main {
   color: black;
   display: block;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: bold;
 }

@@ -14,7 +14,7 @@ const initProduct = {
     },
     {
       id: 2,
-      name: "Cái bàn học",
+      name: "tu Lạnh",
       src: "../assets/imgs/bg4.jpg",
       description: "Đây là mô tả cảu cái bàn",
       type: "DO_NHA_BEP",
@@ -108,7 +108,17 @@ const reducer = ({ products = initProduct, action, args }) => {
     case SEARCH: {
       let productCur = products.products;
       const [value] = [...args];
-      let productNew;
+
+      let productNew = productCur.filter((p) => {
+        let rootvalue = p.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        let SsearchValue = value
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+        let isResult = rootvalue
+          .toLowerCase()
+          .search(SsearchValue.toLowerCase());
+        return isResult != -1;
+      });
       return {
         products: [...productNew],
       };

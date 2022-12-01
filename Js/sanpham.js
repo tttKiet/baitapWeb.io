@@ -1,13 +1,15 @@
 import { attach } from "./store.js";
 import Products from "./component/Products.js";
-import { SORT_PRICE, SORT_STAR, SORT_TYPE } from "./action.js";
+import { SORT_PRICE, SORT_STAR, SORT_TYPE, SEARCH } from "./action.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const searchIcon = $(".search-icon");
 const rmIcon = $(".rm-icon");
-const error = $(".search ~ .error");
+const error = $(".container-search ~ .error");
+const Search = $(".search");
+const deleteInput = $("#delete-input");
 
 // func handleCSs
 const handleSearchCss = () => {
@@ -17,13 +19,22 @@ const handleSearchCss = () => {
   searchIcon.onclick = () => {
     groupSearch.style.display = "flex";
     searchIcon.style.display = "none";
+    Search.focus();
   };
+
+  // btn X
 
   rmIcon.onclick = () => {
     searchIcon.style.display = "block";
     groupSearch.style.display = "none";
     error.classList.toggle("active");
     error.innerText = "";
+    Search.value = "";
+  };
+
+  // deleteInput
+  deleteInput.onclick = () => {
+    Search.value = "";
   };
 
   // btn-filter
@@ -45,10 +56,16 @@ const handleSearchCss = () => {
     }
   });
 };
+
 const products = $(".products");
 // func ramdomProduct
 const ranDomProduct = () => {
   attach(Products, products);
+};
+
+// func search
+const handlerSearch = (value) => {
+  dispatch(SEARCH, value);
 };
 
 // func btn menu
@@ -57,10 +74,9 @@ const handleBtnMenu = () => {
   const btnPrice = $(".btn-price");
   const btnStar = $(".btn-star");
   // input search
-  const Search = $(".search");
   const iconSearchOk = $(".icon_search-ok");
 
-  iconSearchOk.onclick = () => {
+  const handleSearch = () => {
     const value = Search.value.trim();
     if (value.length == 0) {
       error.innerText = "Bạn chưa điền dữ liệu tìm kiếm!";
@@ -71,8 +87,17 @@ const handleBtnMenu = () => {
     } else {
       error.classList.toggle("active");
       error.innerText = "";
+      handlerSearch(value);
     }
+    Search.focus();
   };
+  iconSearchOk.onclick = handleSearch;
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key == "Enter") {
+      iconSearchOk.click();
+    }
+  });
 
   btnPrice.onclick = () => {
     dispatch(SORT_PRICE);

@@ -24,7 +24,7 @@ function Products({ products }) {
                 
                         <div class="product-info">
                             <div class="product-info-top">
-                            <h2 class="sm-title">lifestyle</h2>
+                            <h2 class="sm-title">Đánh giá</h2>
                             <div class="rating">
                                 <span class="countStar">${item.star}</span>
                                 <span>
