@@ -1,0 +1,144 @@
+.header-detail {
+  position: relative;
+}
+
+.header_nav-detail {
+  position: relative;
+}
+
+.detail-product {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 800px;
+  min-height: 200px;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.img-product {
+  width: 90%;
+}
+
+.container-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+  height: calc(100vh - 60px);
+}
+
+.detail-content {
+  width: 80%;
+  border-radius: 5px;
+  height: 90%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.title-product {
+  font-size: 25px;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-top: 25px;
+  color: black;
+
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+  opacity: 0.7;
+}
+
+.about-title {
+  font-weight: 500;
+  padding: 20px 0;
+  color: black;
+  opacity: 0.7;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.about-des {
+  font-size: 18px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+}
+
+.line {
+  display: block;
+  padding: 0 5px;
+  width: 95%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.add-cart {
+  display: flex;
+  padding-top: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.price,
+.price-before {
+  margin: 0;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.btn-add {
+  background: transparent;
+  border: 1px solid black;
+  padding: 0.8rem 0;
+  min-width: 125px;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: all 0.6s ease;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+}
+
+.btn-add:hover {
+  background: #40c9a2;
+  color: #fff;
+}
+
+.detail-nav {
+  display: flex;
+  align-items: center;
+}
+
+.detail-nav-icon {
+  font-size: 30px;
+  margin: 20px 10px 0 20px;
+  cursor: pointer;
+}
+
+.detail-nav-icon:hover {
+  opacity: 0.6;
+}
+
+.add-cart-icon {
+  font-size: 60px;
+  margin: 0 25px 15px 0;
+  color: #40c9a2;
+  position: relative;
+}
+
+.star-index {
+  position: absolute;
+  color: #fff;
+  right: 25px;
+  font-size: 20px;
+  bottom: 15px;
+}
+
+.price-before {
+  color: #40c9a2;
+  text-decoration: line-through;
+}

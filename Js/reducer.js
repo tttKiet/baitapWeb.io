@@ -129,4 +129,6 @@ const reducer = ({ products = initProduct, action, args }) => {
   }
 };
 
+export { initProduct };
+
 export default reducer;
