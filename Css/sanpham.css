@@ -110,9 +110,10 @@ main {
   border: 1px solid transparent;
   outline: none;
   width: 212px;
+  line-height: 1.2rem;
   height: 100%;
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   /* left: 50%; */
   /* transform: translateX(-50%); */
   transition: all ease-out 2.5s;
@@ -189,10 +190,12 @@ main {
 
 .search::placeholder {
   color: var(--carribean-green);
+  opacity: 0.7;
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 1.4rem;
+  line-height: 1rem;
+  font-size: 1.2rem;
 }
 
 .group-search .btn-sm:hover {
