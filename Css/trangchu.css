@@ -261,3 +261,32 @@ li:hover a {
   margin: 40px auto;
   padding: 10px 22px 20px 22px;
 }
+
+/* update Cat */
+/* PHAN DAI CAT  */
+
+/* Gioi thieu  */
+.logo-school {
+  position: absolute;
+  bottom: 51px;
+}
+
+/* footer  */
+
+.list-unstyled a {
+  text-decoration: none;
+}
+
+.list-unstyled a:hover {
+  background-color: #fff;
+  color: #000 !important;
+  margin-left: 20px;
+}
+
+.fse20 {
+  font-size: 20px;
+}
+
+.fse40 {
+  font-size: 40px;
+}
