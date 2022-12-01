@@ -32,7 +32,7 @@ const totalPrice = () => {
 const randomProDuct = () => {
   const itemlist = $(".shop-nav");
   const htmlItemList = html`
-    ${initProduct.map((item, index) => {
+    ${initProduct.products.map((item, index) => {
       return `
     <div class="shop-item">
     <img
