@@ -107,7 +107,7 @@ main {
 .search {
   padding: 8px 16px;
   border-radius: 4px;
-  border: 1px solid transparent;
+  border: none;
   outline: none;
   width: 212px;
   line-height: 1.2rem;
@@ -148,10 +148,11 @@ main {
 
 .wrap.search-wrap {
   min-width: 340px;
-  background-color: var(--gray);
   height: 34px;
-  border-radius: 4px;
+  border-radius: 1px;
   position: relative;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 1px 1px 0px #ccc;
 }
 
 .group-search {
@@ -324,17 +325,22 @@ main {
   height: 200px;
   margin: 0 auto;
   transition: background 0.5s ease;
+  z-index: 0;
   border-radius: 50%;
 }
 
 .product-img > img {
   width: 100%;
+  z-index: 0;
+  max-height: 200px;
+  object-fit: cover;
 }
 
 .product-btns {
   display: flex;
   justify-content: center;
   margin-top: 1.4rem;
+  z-index: 50;
   opacity: 0;
   transition: opacity 0.6s ease;
 }
@@ -349,6 +355,7 @@ main {
   text-transform: uppercase;
   cursor: pointer;
   border: none;
+  z-index: 1;
   transition: all 0.6s ease;
 }
 

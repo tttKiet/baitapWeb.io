@@ -1,6 +1,12 @@
 import { attach } from "./store.js";
 import Products from "./component/Products.js";
-import { SORT_PRICE, SORT_STAR, SORT_TYPE, SEARCH } from "./action.js";
+import {
+  SORT_PRICE,
+  SORT_STAR,
+  SORT_TYPE,
+  SEARCH,
+  ADD_STORE,
+} from "./action.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -119,6 +125,18 @@ const handleBtnMenu = () => {
   };
 };
 
+// add Store
+const handleAddstore = () => {
+  const btnCarts = $$(".btn-cart");
+  btnCarts.forEach((btnCart) => {
+    btnCart.onclick = (e) => {
+      let itemIndex = e.target.closest(".product").dataset.id;
+      dispatch(ADD_STORE, itemIndex);
+      console.log(itemIndex);
+      console.log("click");
+    };
+  });
+};
 // func main
 const productMain = () => {
   //Handle search
@@ -127,6 +145,8 @@ const productMain = () => {
   ranDomProduct();
   // Handle btn menu
   handleBtnMenu();
+  // Handle add store
+  handleAddstore();
 };
 
 productMain();

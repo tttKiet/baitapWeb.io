@@ -1,4 +1,10 @@
-import { SORT_TYPE, SORT_STAR, SORT_PRICE, SEARCH } from "./action.js";
+import {
+  SORT_TYPE,
+  SORT_STAR,
+  SORT_PRICE,
+  SEARCH,
+  ADD_STORE,
+} from "./action.js";
 
 const initProduct = {
   products: [
@@ -32,6 +38,18 @@ const initProduct = {
       price: "190000",
       star: "4",
     },
+    {
+      id: 4,
+      name: "Cái Ghe học",
+      src: "../assets/imgs/anh1.jpg",
+      description: "Đây là mô tả cảu cái bàn",
+      type: "DO_NHA_BEP",
+      rootPrice: "408000",
+      price: "160000",
+      star: "5",
+    },
+  ],
+  store: [
     {
       id: 4,
       name: "Cái Ghe học",
@@ -122,6 +140,10 @@ const reducer = ({ products = initProduct, action, args }) => {
       return {
         products: [...productNew],
       };
+    }
+    case ADD_STORE: {
+      console.log(...args);
+      return { products: [...initStore] };
     }
     default: {
       return products;

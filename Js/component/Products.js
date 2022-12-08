@@ -3,9 +3,9 @@ import { connect } from "../store.js";
 
 const connector = connect();
 function Products({ products }) {
-  return html` ${products.map((item, index) => {
+  return html` ${products.map((item) => {
     return `
-                    <div class="product">
+                    <div data-id="${item.id}" class="product">
                         <div class="product-content">
                                 <div class="product-img">
                                 <img src="${item.src}" />
