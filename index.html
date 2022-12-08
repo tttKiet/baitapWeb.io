@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop</title>
+    <title>Trang Chủ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <!-- Link font -->
@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./Css/GlobalStyle.css" />
     <link rel="stylesheet" href="./Css/root.css" />
     <link rel="stylesheet" href="./Css/trangchu.css" />
+    <link rel="stylesheet" href="./Css/cat.css" />
   </head>
   <body>
     <div class="app">
@@ -53,9 +54,7 @@
                     <a href="./sanpham.html" class="header-link">Sản Phẩm</a>
                   </li>
                   <li class="item-link">
-                    <a href="./chitietsp.html" class="header-link"
-                      >Chi tiết sản phẩm</a
-                    >
+                    <a href="#" class="header-link">Chi tiết sản phẩm</a>
                   </li>
                   <li class="item-link">
                     <a href="#" class="header-link">Quản Lý Danh Mục</a>
@@ -75,7 +74,7 @@
                     </a>
                   </li>
                   <li class="item-link">
-                    <a href="./giohang.html" class="header-link">
+                    <a href="" class="header-link">
                       <i class="uil uil-shopping-bag"></i>
                     </a>
                   </li>
@@ -96,7 +95,7 @@
             <div class="container px-4 rounded text-center">
               <div class="row gx-5">
                 <div class="col">
-                  <div class="p-3 border des-cus">
+                  <div class="p-3 border des-cus header__content">
                     <span class="description_content">
                       Đồ gia dụng mini là những sản phẩm gọn nhẹ, dễ sử dụng và
                       tiết kiệm điện năng. Đối với sinh viên thì ngoài dụng cụ
@@ -109,12 +108,29 @@
                       đảm bảo.
                     </span>
                   </div>
+
+                  <div class="p-3 border des-cus header__content">
+                    <span class="description_content">
+                      Nếu bạn là người thông minh và hiện đại theo chủ trương
+                      "làm việc thông minh" thì luôn cần có những dụng cụ, đồ
+                      dùng chuyên dụng & thông minh để giúp bạn có thể hoàn
+                      thành mong muốn đó. Người chiến sĩ sẽ lợi hại hơn nếu cầm
+                      vũ khí, đúng không nào?
+                    </span>
+                    <span class="description_content">
+                      Với phương châm làm việc của Gia Dụng Plus là cung ứng sản
+                      phẩm chất lượng nhất, mẫu mã mới nhất với công năng thông
+                      minh nhất cho người dùng với giá rẻ nhất.
+                    </span>
+                  </div>
                 </div>
+
                 <div class="col">
                   <div class="">
                     <img
+                      height="400px"
                       class="w-100 rounded border"
-                      src="./assets/imgs/anh1.jpg"
+                      src="./assets/imgs/3.jpg"
                       alt=""
                     />
                   </div>
@@ -122,6 +138,10 @@
               </div>
             </div>
           </div>
+
+          <h1 class="header__company">
+            -- Công ty cung cấp đồ gia dụng của nhóm 05 --
+          </h1>
         </header>
         <main>
           <!-- Carousel dung bootchap-->
@@ -180,7 +200,8 @@
                       data-bs-interval="2000"
                     >
                       <img
-                        src="./assets/imgs/2.jpg"
+                        style="height: 280px"
+                        src="./assets/imgs/3.jpg"
                         class="d-block w-100"
                         alt="..."
                       />
@@ -194,7 +215,8 @@
                     </div>
                     <div class="carousel-item border rounded border-white">
                       <img
-                        src="./assets/imgs/2.jpg"
+                        style="height: 280px"
+                        src="./assets/imgs/1.jpg"
                         class="d-block w-100"
                         alt="..."
                       />
@@ -243,17 +265,17 @@
                       alt=""
                       data-bs-toggle="tooltip"
                       data-bs-placement="top"
-                      title="Sao Thủy - Mercury"
+                      title=""
                     />
                   </div>
                   <div class="col-6">
                     <img
-                      src="./assets/imgs/2.jpg"
+                      src="assets/images/mm4.jpg"
                       class="w-100 h-140 d-block border rounded border-white"
                       alt=""
                       data-bs-toggle="tooltip"
                       data-bs-placement="top"
-                      title="Sao Thủy - Mercury"
+                      title=""
                     />
                   </div>
                 </div>
@@ -261,12 +283,12 @@
                 <div class="row">
                   <div class="col-6">
                     <img
-                      src="./assets/imgs/3.jpg"
+                      src="./assets/images/mm5.jpg"
                       class="w-100 h-140 d-block border rounded border-white"
                       alt=""
                       data-bs-toggle="tooltip"
                       data-bs-placement="bottom"
-                      title="Sao Thủy - Mercury"
+                      title=""
                     />
                   </div>
 
@@ -275,7 +297,7 @@
                       src="./assets/imgs/3.jpg"
                       data-bs-toggle="tooltip"
                       data-bs-placement="right"
-                      title="Sao Thủy - Mercury"
+                      title=""
                       class="w-100 h-140 d-block border rounded border-white"
                       alt=""
                     />
@@ -284,14 +306,15 @@
               </div>
             </div>
             <!-- Gioi thieu -->
-            <div class="row form-g p-4 mt-5 container border border-white">
-              <div class="col-sm-4 form-g-col">
+            <div class="row form-g p-4 mt-5 container border-white">
+              <!-- <div class="col-sm-4 form-g-col">
                 <img
                   class="logo-school"
                   src="./assets/imgs/1024px-Logo_Dai_hoc_Can_Tho.svg.png"
                 />
-              </div>
-              <div class="col-sm-8">
+              </div> -->
+              <!-- <div class="col-sm-8"> -->
+              <div>
                 <div class="row">
                   <h1 class="title-header"><p>Giới Thiệu</p></h1>
                 </div>
@@ -312,56 +335,75 @@
 
           <div class="content-body container border_body">
             <!--  -->
-            <div class="mt-5 bg-content-title">
-              <div class="row">
-                <h1 class="title-header"><p>Xoong, nồi, chảo</p></h1>
+            <div class="container__body border_body">
+              <div class="container-product-farm">
+                <div class="container__product">
+                  <img
+                    class="container-img"
+                    src="assets/images/mm1.jpg"
+                    alt=""
+                  />
+                  <h1>Tai nghe</h1>
+                  <p>13 USD</p>
+                </div>
               </div>
-              <div class="row">
-                <span class="content-title">
-                  Đầu tiên phải kể đến dụng cụ cần chuẩn bị cho căn bếp đó là
-                  xoong, nồi, chảo, nồi cơm điện giúp các bạn chuẩn bị các bữa
-                  ăn trong ngày, đảm bảo được ăn ngon và an toàn vệ sinh thực
-                  phẩm với các món ăn tự chế biến.
-                </span>
+              <div class="container-product-farm">
+                <div class="container__product">
+                  <img
+                    class="container-img"
+                    src="assets/images/mm2.jpg"
+                    alt=""
+                  />
+                  <h1>Thùng loa</h1>
+                  <p>500 USD</p>
+                </div>
               </div>
-            </div>
-            <div class="mt-5 bg-content-title">
-              <div class="row">
-                <h1 class="title-header"><p>Xoong, nồi, chảo</p></h1>
-              </div>
-              <div class="row">
-                <span class="content-title">
-                  Đầu tiên phải kể đến dụng cụ cần chuẩn bị cho căn bếp đó là
-                  xoong, nồi, chảo, nồi cơm điện giúp các bạn chuẩn bị các bữa
-                  ăn trong ngày, đảm bảo được ăn ngon và an toàn vệ sinh thực
-                  phẩm với các món ăn tự chế biến.
-                </span>
-              </div>
-            </div>
-            <div class="mt-5 bg-content-title">
-              <div class="row">
-                <h1 class="title-header"><p>Xoong, nồi, chảo</p></h1>
-              </div>
-              <div class="row">
-                <span class="content-title">
-                  Đầu tiên phải kể đến dụng cụ cần chuẩn bị cho căn bếp đó là
-                  xoong, nồi, chảo, nồi cơm điện giúp các bạn chuẩn bị các bữa
-                  ăn trong ngày, đảm bảo được ăn ngon và an toàn vệ sinh thực
-                  phẩm với các món ăn tự chế biến.
-                </span>
+              <div class="container-product-farm">
+                <div class="container__product">
+                  <img
+                    class="container-img"
+                    src="assets/images/mm3.jpg"
+                    alt=""
+                  />
+                  <h1>Camera</h1>
+                  <p>200 USD</p>
+                </div>
               </div>
             </div>
-            <div class="mt-5 bg-content-title">
-              <div class="row">
-                <h1 class="title-header"><p>Xoong, nồi, chảo</p></h1>
+
+            <div class="container__body border_body">
+              <div class="container-product-farm">
+                <div class="container__product">
+                  <img
+                    class="container-img"
+                    src="assets/images/mm4.jpg"
+                    alt=""
+                  />
+                  <h1>Bàn ủi</h1>
+                  <p>20 USD</p>
+                </div>
               </div>
-              <div class="row">
-                <span class="content-title">
-                  Đầu tiên phải kể đến dụng cụ cần chuẩn bị cho căn bếp đó là
-                  xoong, nồi, chảo, nồi cơm điện giúp các bạn chuẩn bị các bữa
-                  ăn trong ngày, đảm bảo được ăn ngon và an toàn vệ sinh thực
-                  phẩm với các món ăn tự chế biến.
-                </span>
+              <div class="container-product-farm">
+                <div class="container__product">
+                  <img
+                    class="container-img"
+                    src="assets/images/mm5.jpg"
+                    alt=""
+                  />
+                  <h1>Máy duỗi tóc</h1>
+                  <p>27 USD</p>
+                </div>
+              </div>
+              <div class="container-product-farm">
+                <div class="container__product">
+                  <img
+                    class="container-img"
+                    src="assets/images/mm6.jpg"
+                    alt=""
+                  />
+                  <h1>Bếp điện</h1>
+                  <p>200 USD - 300 USD</p>
+                </div>
               </div>
             </div>
           </div>

@@ -109,10 +109,12 @@ const handleBtnMenu = () => {
 
   btnPrice.onclick = () => {
     dispatch(SORT_PRICE);
+    renderBTN();
   };
 
   btnStar.onclick = () => {
     dispatch(SORT_STAR);
+    renderBTN();
   };
 
   btnType.onclick = (e) => {
@@ -133,10 +135,8 @@ const renderBTN = () => {
   if (!btnCarts) return;
   for (let i = 0; i < btnCarts.length; i++) {
     btnCarts[i].onclick = (e) => {
-      console.log("click");
       const itemIndex = e.target.closest(".product").dataset.id;
       dispatch(ADD_STORE, itemIndex);
-      console.log(itemIndex);
       renderBTN();
     };
   }

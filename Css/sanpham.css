@@ -1,3 +1,8 @@
+.header {
+  background: url("../assets/imgs/bg_pro.jpg") center no-repeat;
+  background-size: cover;
+}
+
 main {
   padding: 20px 0;
 }
@@ -467,4 +472,22 @@ svg {
   margin-right: 2px;
 }
 
-/*  */
+/*demo header  */
+.demo_header {
+  display: flex;
+  flex-direction: column;
+}
+
+.christmas {
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+}
+
+.nameweb.textshadow {
+  text-align: center;
+  padding: 20px;
+  text-shadow: 0 0 5px var(--carribean-green);
+}

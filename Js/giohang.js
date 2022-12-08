@@ -11,7 +11,6 @@ const render = () => {
   let store = window.localStorage.getItem("store");
   store = JSON.parse(store);
   let itemStore = initProduct.productStore.filter((item) => {
-    console.log(item);
     return store.indexOf(`${item.id}`) > -1;
   });
   addShop.innerHTML = Carts(itemStore);
