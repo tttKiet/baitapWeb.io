@@ -2,8 +2,8 @@ import { html } from "../core.js";
 import { connect } from "../store.js";
 
 const connector = connect();
-function Products({ products }) {
-  return html` ${products.map((item) => {
+function Products(products) {
+  return html` ${products.productStore.map((item) => {
     return `
                     <div data-id="${item.id}" class="product">
                         <div class="product-content">

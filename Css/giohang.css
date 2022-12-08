@@ -4,14 +4,31 @@
 }
 
 .shop-nav {
-  display: flex;
-  justify-content: space-around;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   border-radius: 2px;
   z-index: 2;
   background-color: #f5f7fa;
   margin: 0 10px 10px 10px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: #f5f7fa;
+  margin: 0 10px 10px 10px;
+}
+
+.add-shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f7fa;
+  margin: 10px 30px 10px 30px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
 .shop-item {

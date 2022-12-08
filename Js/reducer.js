@@ -7,7 +7,7 @@ import {
 } from "./action.js";
 
 const initProduct = {
-  products: [
+  productStore: [
     {
       id: 1,
       name: "Cái bàn học",
@@ -49,24 +49,15 @@ const initProduct = {
       star: "5",
     },
   ],
-  store: [
-    {
-      id: 4,
-      name: "Cái Ghe học",
-      src: "../assets/imgs/anh1.jpg",
-      description: "Đây là mô tả cảu cái bàn",
-      type: "DO_NHA_BEP",
-      rootPrice: "408000",
-      price: "160000",
-      star: "5",
-    },
-  ],
 };
+
+var store = [];
 
 const reducer = ({ products = initProduct, action, args }) => {
   switch (action) {
     case SORT_TYPE: {
-      let productCur = products.products;
+      let productCur = products.productStore;
+
       const [value] = [...args];
       let productNew;
       switch (value) {
@@ -76,7 +67,8 @@ const reducer = ({ products = initProduct, action, args }) => {
           });
 
           return {
-            products: [...productNew],
+            productStore: [...productNew],
+            store: products.store,
           };
         }
 
@@ -86,7 +78,8 @@ const reducer = ({ products = initProduct, action, args }) => {
           });
 
           return {
-            products: [...productNew],
+            productStore: [...productNew],
+            store: products.store,
           };
         }
 
@@ -96,35 +89,38 @@ const reducer = ({ products = initProduct, action, args }) => {
           });
 
           return {
-            products: [...productNew],
+            ...products,
+            store: products.store,
           };
         }
       }
       return products;
     }
     case SORT_STAR: {
-      let productCur = products.products;
+      let productCur = products.productStore;
       let productNew = productCur.sort((a, b) => {
         return parseFloat(a.star) > parseFloat(b.star) ? -1 : 1;
       });
 
       return {
-        products: [...productNew],
+        productStore: [...productNew],
+        store: products.store,
       };
     }
     case SORT_PRICE: {
-      let productCur = products.products;
+      let productCur = products.productStore;
       let productNew = productCur.sort((a, b) => {
         console.log(parseFloat(a.price));
         return parseFloat(a.price) > parseFloat(b.price) ? 1 : -1;
       });
 
       return {
-        products: [...productNew],
+        productStore: [...productNew],
+        store: products.store,
       };
     }
     case SEARCH: {
-      let productCur = products.products;
+      let productCur = products.productStore;
       const [value] = [...args];
 
       let productNew = productCur.filter((p) => {
@@ -138,13 +134,26 @@ const reducer = ({ products = initProduct, action, args }) => {
         return isResult != -1;
       });
       return {
-        products: [...productNew],
+        productStore: [...productNew],
+        store: products.store,
       };
     }
     case ADD_STORE: {
-      console.log(...args);
-      return { products: [...initStore] };
+      let [value] = [...args];
+      console.log(value);
+
+      let store = window.localStorage.getItem("store");
+      // console.log("json", store);
+      if (store) {
+        store = JSON.parse(store);
+        window.localStorage.setItem("store", JSON.stringify([...store, value]));
+      } else {
+        window.localStorage.setItem("store", JSON.stringify(value));
+      }
+
+      return products;
     }
+
     default: {
       return products;
     }

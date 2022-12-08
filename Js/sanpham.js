@@ -1,5 +1,6 @@
 import { attach } from "./store.js";
 import Products from "./component/Products.js";
+import Carts from "./component/Carts.js";
 import {
   SORT_PRICE,
   SORT_STAR,
@@ -82,6 +83,7 @@ const handleBtnMenu = () => {
   // input search
   const iconSearchOk = $(".icon_search-ok");
 
+  if (!btnPrice || !btnPrice || !btnStar) return;
   const handleSearch = () => {
     const value = Search.value.trim();
     if (value.length == 0) {
@@ -126,20 +128,26 @@ const handleBtnMenu = () => {
 };
 
 // add Store
-const handleAddstore = () => {
+const renderBTN = () => {
   const btnCarts = $$(".btn-cart");
-  btnCarts.forEach((btnCart) => {
-    btnCart.onclick = (e) => {
-      let itemIndex = e.target.closest(".product").dataset.id;
+  if (!btnCarts) return;
+  for (let i = 0; i < btnCarts.length; i++) {
+    btnCarts[i].onclick = (e) => {
+      console.log("click");
+      const itemIndex = e.target.closest(".product").dataset.id;
       dispatch(ADD_STORE, itemIndex);
       console.log(itemIndex);
-      console.log("click");
+      renderBTN();
     };
-  });
+  }
 };
+
+const handleAddstore = () => {
+  renderBTN();
+};
+
 // func main
 const productMain = () => {
-  //Handle search
   handleSearchCss();
   // ranDomProduct();
   ranDomProduct();
