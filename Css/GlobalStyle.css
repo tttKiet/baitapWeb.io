@@ -85,3 +85,141 @@ a {
   background-color: #d7d4d4aa;
   color: #000;
 }
+
+/* toast */
+#toast {
+  position: fixed;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  color: #fff;
+  z-index: 10000 !important;
+  padding: 8px 0;
+}
+
+.toast-cus {
+  box-shadow: 0 0 5px 1px rgb(246, 245, 245);
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  min-height: 74px;
+  border-radius: 6px 4px;
+  width: 320px;
+  flex: 1;
+  border: 1px solid rgb(205, 203, 203);
+  transition: all 0.4s linear;
+}
+
+@keyframes showToast {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes out {
+  to {
+    opacity: 0;
+  }
+}
+
+.toast__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast__massage {
+  margin-left: 12px;
+  flex: 1;
+}
+
+.toast__icon > i {
+  background-color: var(--carribean-green);
+  border-radius: 50%;
+  color: #fff !important;
+}
+
+.toast-success {
+  position: relative;
+}
+
+.toast-cus + .toast-cus {
+  margin-top: 14px;
+}
+
+.toast-success::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 6px;
+  height: 54px;
+  border-radius: 20px;
+  background-color: var(--carribean-green);
+}
+
+.icon-toast {
+  font-size: 20px;
+  padding: 0 4px;
+  color: rgb(0, 0, 0);
+  margin-left: 22px;
+}
+
+.toast__massage-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-shadow: 1px 0 2px rgba(0, 0, 0, 0.355);
+}
+
+.toast__icon_close {
+  margin-right: 10px;
+  color: #000;
+}
+
+.toast__icon_close:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.toast__massage-content {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  color: #000;
+  opacity: 0.8;
+}
+
+.toast-success .toast__massage-title,
+.toast-success .icon-toast {
+  color: #000;
+}
+
+.toast-error {
+  position: relative;
+}
+
+.toast-error::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 6px;
+  height: 54px;
+  border-radius: 20px;
+  background-color: rgb(230, 251, 7);
+}
+
+.toast-error > .toast__icon > i {
+  background-color: rgb(230, 251, 7);
+}

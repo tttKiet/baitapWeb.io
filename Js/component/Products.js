@@ -11,7 +11,7 @@ function Products(products) {
                                 <img src="${item.src}" />
                                 </div>
                                 <div class="product-btns">
-                                <button type="button" class="btn-cart">
+                                <button type="button" class="btn-cart" >
                                     Thêm vào giỏ
                                     <span><i class="uil uil-plus"></i></span>
                                 </button>

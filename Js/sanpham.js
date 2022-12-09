@@ -1,6 +1,7 @@
 import { attach } from "./store.js";
 import Products from "./component/Products.js";
-import Carts from "./component/Carts.js";
+import toast from "./toast.js";
+
 import {
   SORT_PRICE,
   SORT_STAR,
@@ -130,17 +131,26 @@ const handleBtnMenu = () => {
 };
 
 // add Store
+
 const renderBTN = () => {
   const btnCarts = $$(".btn-cart");
   if (!btnCarts) return;
   for (let i = 0; i < btnCarts.length; i++) {
-    btnCarts[i].onclick = (e) => {
+    btnCarts[i].addEventListener("click", (e) => {
       const itemIndex = e.target.closest(".product").dataset.id;
       dispatch(ADD_STORE, itemIndex);
       renderBTN();
-    };
+      toast({
+        type: "success",
+        title: "Đã thêm!",
+        massage: "Vào giỏ hàng để xem sản phẩm",
+        duration: 4000,
+      });
+    });
   }
 };
+
+// remove toast
 
 const handleAddstore = () => {
   renderBTN();

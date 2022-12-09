@@ -203,7 +203,6 @@ const reducer = ({ products = initProduct, action, args }) => {
     }
     case ADD_STORE: {
       let [value] = [...args];
-      console.log(value);
 
       let store = window.localStorage.getItem("store");
       // console.log("json", store);

@@ -285,6 +285,7 @@ main {
 .products {
   border: 1px solid #fff;
   display: grid;
+  z-index: 1;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
