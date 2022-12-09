@@ -40,6 +40,16 @@
 
 .info_icon {
   width: 190px;
+  padding: 5px;
+}
+
+#avt {
+  width: 34px;
+  height: 34px;
+  margin-right: 2px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 1px solid rgb(168, 127, 127);
 }
 
 .logo:hover {
@@ -60,7 +70,8 @@
 .header_item {
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end !important;
+  align-items: c;
   list-style: none;
   margin-bottom: 0;
   padding: 0;
@@ -79,6 +90,46 @@
   overflow: hidden;
   transition: all ease-in-out 0.2s;
   box-shadow: 0px 1px 0px rgba(204, 204, 204, 0.305);
+}
+
+.avt:hover::before,
+.avt:hover::after,
+.out:hover::before,
+.out:hover::after {
+  display: none;
+}
+
+.item-link.avt {
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.item-link.out {
+  box-shadow: none;
+}
+
+.item-link.out::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(03px) !important;
+  display: block;
+  content: "";
+  border-left: 1px solid inherit;
+  height: 60%;
+}
+
+.item-link.out:hover span {
+  transition: all 0.3s linear;
+  color: red !important;
+  cursor: pointer;
+}
+
+.avt {
+  padding: 0;
 }
 
 .item-link ~ .item-link {
@@ -231,6 +282,12 @@ li:hover a {
 
 .form-g-col {
   display: flex;
+}
+
+.avt,
+.out,
+.store {
+  display: none;
 }
 
 .logo-school {

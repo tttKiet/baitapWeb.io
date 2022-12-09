@@ -1,6 +1,5 @@
 import { attach } from "./store.js";
 import Products from "./component/Products.js";
-import toast from "./toast.js";
 
 import {
   SORT_PRICE,
@@ -18,6 +17,12 @@ const rmIcon = $(".rm-icon");
 const error = $(".container-search ~ .error");
 const Search = $(".search");
 const deleteInput = $("#delete-input");
+// check user
+
+const checkUser = () => {
+  const curUser = window.localStorage.getItem("curUser");
+  if (curUser) return true;
+};
 
 // func handleCSs
 const handleSearchCss = () => {
@@ -138,14 +143,23 @@ const renderBTN = () => {
   for (let i = 0; i < btnCarts.length; i++) {
     btnCarts[i].addEventListener("click", (e) => {
       const itemIndex = e.target.closest(".product").dataset.id;
-      dispatch(ADD_STORE, itemIndex);
-      renderBTN();
-      toast({
-        type: "success",
-        title: "Đã thêm!",
-        massage: "Vào giỏ hàng để xem sản phẩm",
-        duration: 4000,
-      });
+      if (checkUser()) {
+        dispatch(ADD_STORE, itemIndex);
+        renderBTN();
+        toast({
+          type: "success",
+          title: "Đã thêm!",
+          massage: "Vào giỏ hàng để xem sản phẩm",
+          duration: 4000,
+        });
+      } else {
+        toast({
+          type: "error",
+          title: "Lỗi rồi!",
+          massage: "Bạn phải đăng nhập để thêm vào giỏ hàng của mình!",
+          duration: 4000,
+        });
+      }
     });
   }
 };

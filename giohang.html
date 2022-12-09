@@ -42,16 +42,11 @@
     <div class="app">
       <div class="root">
         <header class="header header-detail">
-          <!-- Do mo -->
-          <!-- <div id="op-5"></div> -->
-          <!-- nav -->
           <div class="header_nav header_nav-detail">
             <div class="header_container">
-              <div class="wrap-logo">
-                <a href="./index.html" class="logo">
-                  <img src="./assets/imgs/logo.png" alt="" />
-                </a>
-              </div>
+              <a href="./index.html" class="logo">
+                <img src="./assets/imgs/logo.png" alt="" />
+              </a>
               <div class="navbar">
                 <ul class="header_item">
                   <li class="item-link">
@@ -72,19 +67,24 @@
               </div>
               <div class="info_icon">
                 <ul class="header_item">
-                  <li class="item-link">
-                    <a href="#" class="header-link">
-                      <i class="uil uil-search"></i>
-                    </a>
-                  </li>
-                  <li class="item-link">
+                  <li class="item-link user">
                     <a href="./dangnhap.html" class="header-link">
                       <i class="uil uil-user"></i>
                     </a>
                   </li>
-                  <li class="item-link">
-                    <a href="#" class="header-link">
-                      <i class="uil uil-shopping-bag"> </i>
+
+                  <!--  -->
+                  <li class="item-link avt">
+                    <img src="./assets/imgs/3.jpg" alt="" id="avt" />
+                  </li>
+
+                  <li class="item-link out">
+                    <span class="header-link">Thoát</span>
+                  </li>
+
+                  <li class="item-link store">
+                    <a href="./giohang.html" class="header-link">
+                      <i class="uil uil-shopping-bag"></i>
                     </a>
                   </li>
                 </ul>
@@ -143,7 +143,7 @@
                       </div>
                       <span class="line"></span>
                       <div class="buy-now">
-                        <button class="buy-btn btn-add">Mua ngay</button>
+                        <button id="myBtn" class="buy-btn btn-add">Mua ngay</button>
                       </div>
                     </div>
                   </div>
@@ -152,10 +152,30 @@
             </div>
           </div>
         </header>
-      </div>
-    </div>
-
+        <div id="myModal" class="modal-cart">
+          <!-- Modal content -->
+          <div class="modal-content-cart">
+            <div class="modal-header-cart">
+              <span class="close">&times;</span>
+              <h1>Đơn hàng của bạn</h1>
+            </div>
+            <div class="modal-body-cart">
+              <p>Tổng số lượng sản phẩm: <span>100</span></p>
+              <p>Tổng giá tiền: </p>
+              <p>Vui lòng nhập địa chỉ tại đây: <input class="modal-input" type="text" placeholder="Nhập địa chỉ của bạn ở đây"></p>
+              
+            </div>
+            <div class="modal-footer-cart">
+              <div class="modal-footer-btn">
+                <button class="submit-cart-btn">Đặt hàng ngay</button>
+              </div>
+            </div>
+          </div>
+        
+        </div>
     <!-- JS -->
     <script src="./Js/giohang.js" type="module"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>

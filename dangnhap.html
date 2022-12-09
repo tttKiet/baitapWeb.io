@@ -7,9 +7,21 @@
     <link rel="stylesheet" href="./Css/root.css" />
     <link rel="stylesheet" href="./Css/GlobalStyle.css" />
     <link rel="stylesheet" href="./Css/dat_dangnhap.css" />
+
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <title>Dang nhap</title>
   </head>
   <body>
+    <div id="toast"></div>
+
     <div class="app">
       <div class="root">
         <!--header-->
@@ -17,14 +29,20 @@
 
         <div class="container">
           <h2>Đăng nhập</h2>
-          <form action="./index.html" method="get">
+          <form
+            action="./index.html"
+            method="get"
+            onsubmit="return register(this)"
+          >
             <input
+              id="email"
               type="email"
               name="Username"
               placeholder="EMAIL"
               required=""
             />
             <input
+              id="password"
               type="password"
               name="Password"
               placeholder="PASSWORD"
@@ -32,7 +50,7 @@
             />
             <ul class="agileinfotickwthree">
               <li>
-                <input type="checkbox" id="brand1" value="" />
+                <input type="checkbox" checked id="brand1" value="1" />
                 <label for="brand1"><span></span>Nhớ tên tài khoản</label>
                 <a href="#">Quên mật khẩu?</a>
               </li>
@@ -53,7 +71,8 @@
           <div class="contact-form1">
             <div class="contact-agileits">
               <h3>ĐĂNG KÝ</h3>
-              <form action="#" method="post">
+
+              <form action="./index.html" onsubmit="return login(this)">
                 <div class="form-sub">
                   <input placeholder="Tên tài khoản" type="text" required="" />
                   <div class="icon-agile">
@@ -63,7 +82,7 @@
                 <div class="form-sub">
                   <input
                     placeholder="Email"
-                    class="mail"
+                    class="mail-dn"
                     type="email"
                     required=""
                   />
@@ -72,13 +91,19 @@
                   </div>
                 </div>
                 <div class="form-sub">
-                  <input placeholder="Mật khẩu" type="password" required="" />
+                  <input
+                    placeholder="Mật khẩu"
+                    type="password"
+                    class="passDn"
+                    required=""
+                  />
                   <div class="icon-agile">
                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>
                   </div>
                 </div>
                 <div class="form-sub">
                   <input
+                    class="repassDn"
                     placeholder="Nhập lại mật khẩu"
                     type="password"
                     required=""
@@ -128,5 +153,9 @@
         });
       });
     </script>
+    <!-- script -->
+    <script src="./Js/toast.js"></script>
+    <script src="./Js/dangnhap.js"></script>
+    <script src="./Js/dangky.js"></script>
   </body>
 </html>

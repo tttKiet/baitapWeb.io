@@ -31,13 +31,18 @@ const toast = ({ type, title, massage, duration }) => {
       }
     };
 
+    const icon = {
+      success: "uis uis-check icon-toast",
+      error: "uis uis-exclamation-octagon icon-toast",
+    };
+
     toastMes.classList.add("toast-cus", `toast-${type}`);
     const delay = (duration / 1000).toFixed(2);
     toastMes.style.animation = `showToast 0.4s ease-in-out, out 0.4s linear ${delay}s forwards`;
 
     toastMes.innerHTML = `
                 <div class="toast__icon">
-                    <i class="uil uil-check icon-toast"></i>
+                    <i class="${icon[type]}"></i>
                 </div>
             
                 <div class="toast__massage">
@@ -53,7 +58,6 @@ const toast = ({ type, title, massage, duration }) => {
   }
 };
 
-export default toast;
 // toast({
 //   type: "success",
 //   title: "Đã thêm!",

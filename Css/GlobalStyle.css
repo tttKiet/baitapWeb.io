@@ -217,9 +217,9 @@ a {
   width: 6px;
   height: 54px;
   border-radius: 20px;
-  background-color: rgb(230, 251, 7);
+  background-color: rgb(241, 0, 0);
 }
 
 .toast-error > .toast__icon > i {
-  background-color: rgb(230, 251, 7);
+  background-color: rgb(241, 0, 0);
 }

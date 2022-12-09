@@ -44,6 +44,44 @@ const app = () => {
       }
     }
   });
+
+  // Get user
+  window.addEventListener("load", () => {
+    getUser();
+  });
+  const getUser = () => {
+    const curUser = window.localStorage.getItem("curUser");
+    const user = $(".user");
+    const avt = $(".avt");
+    const out = $(".out");
+    const store = $(".store");
+    if (curUser) {
+      console.log(user);
+      user.style.display = "none";
+      avt.style.display = "block";
+      out.style.display = "block";
+      store.style.display = "block";
+    } else {
+      user.style.display = "block";
+      avt.style.display = "none";
+      out.style.display = "none";
+      store.style.display = "none";
+    }
+  };
+  const out = $(".out");
+  if (out) {
+    const user = $(".user");
+    const avt = $(".avt");
+    const out = $(".out");
+    const store = $(".store");
+    out.onclick = () => {
+      window.localStorage.removeItem("curUser");
+      user.style.display = "block";
+      avt.style.display = "none";
+      out.style.display = "none";
+      store.style.display = "none";
+    };
+  }
 };
 
 app();
