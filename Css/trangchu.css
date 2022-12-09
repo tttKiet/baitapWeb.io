@@ -21,11 +21,25 @@
   height: 60px;
   align-items: center;
 }
-
+.wrap-logo {
+  width: 190px;
+}
 .logo {
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.434);
   border-radius: 16px 8px 16px 8px;
+  height: 80%;
+  display: flex;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo > img {
+}
+
+.info_icon {
+  width: 190px;
 }
 
 .logo:hover {
@@ -49,6 +63,7 @@
   justify-content: space-around;
   list-style: none;
   margin-bottom: 0;
+  padding: 0;
 }
 
 .header-link {
