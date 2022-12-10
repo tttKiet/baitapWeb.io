@@ -11,6 +11,28 @@
   top: 0;
   z-index: 10000;
   transition: all linear 0.3s;
+  animation: ani1 ease-in 0.4s;
+}
+
+@keyframes ani1 {
+  from {
+    top: -60px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    margin-left: -60px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .header_container {
@@ -41,15 +63,6 @@
 .info_icon {
   width: 190px;
   padding: 5px;
-}
-
-#avt {
-  width: 34px;
-  height: 34px;
-  margin-right: 2px;
-  border-radius: 50px;
-  object-fit: cover;
-  border: 1px solid rgb(168, 127, 127);
 }
 
 .logo:hover {
@@ -103,12 +116,33 @@
   border: none;
   box-shadow: none;
   padding: 0;
+  border-radius: 50px;
   display: flex;
+  border: 1px solid rgb(168, 127, 127);
   align-items: center;
+}
+
+#avt {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  transform: scale(2.2);
+  margin-right: 2px;
+  border-radius: 50px;
+  object-position: center;
 }
 
 .item-link.out {
   box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-link.out > span {
+  font-size: 1.2rem;
+  line-height: 25px;
+  text-shadow: 0 0 100px rgb(227, 16, 174);
 }
 
 .item-link.out::after {

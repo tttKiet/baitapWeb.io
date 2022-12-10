@@ -129,7 +129,6 @@ const handleBtnMenu = () => {
       const value = e.target.dataset.type;
       dispatch(SORT_TYPE, value);
     } else {
-      console.log("test");
       e.preventDefault();
     }
   };

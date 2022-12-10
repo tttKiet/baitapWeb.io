@@ -53,10 +53,11 @@ const app = () => {
     const curUser = window.localStorage.getItem("curUser");
     const user = $(".user");
     const avt = $(".avt");
+    const avtUser = $("#avt");
     const out = $(".out");
     const store = $(".store");
     if (curUser) {
-      console.log(user);
+      avtUser.src = JSON.parse(curUser).avt;
       user.style.display = "none";
       avt.style.display = "block";
       out.style.display = "block";
@@ -75,6 +76,12 @@ const app = () => {
     const out = $(".out");
     const store = $(".store");
     out.onclick = () => {
+      toast({
+        title: "Đã đăng xuất!",
+        type: "success",
+        massage: "Thanks you for job",
+        duration: 2500,
+      });
       window.localStorage.removeItem("curUser");
       user.style.display = "block";
       avt.style.display = "none";

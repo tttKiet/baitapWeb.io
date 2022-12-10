@@ -1,7 +1,10 @@
 const USERS =
   '[\
-    { "email": "buikiet@gmail.com", "password": "hibuikiet", "avt": "../assets/imgs/item-chrismas.jpg" },\
-    { "email": "chaunghi@gmail.com", "password": "hichaunghi", "avt": "../assets/imgs/item-chrismas.jpg" }\
+    { "email": "buikiet@gmail.com", "password": "buikiet", "avt": "../assets/imgs/kiet.jpg" },\
+    { "email": "chaunghi@gmail.com", "password": "chaunghi", "avt": "../assets/imgs/nghi.jpg" },\
+    { "email": "daicat@gmail.com", "password": "daicat", "avt": "../assets/imgs/cat.jpg" },\
+    { "email": "phatdat@gmail.com", "password": "phatdat", "avt": "../assets/imgs/dat.jpg" },\
+    { "email": "thevan@gmail.com", "password": "thevan", "avt": "../assets/imgs/van.jpg" }\
     ]';
 
 const register = (form) => {
