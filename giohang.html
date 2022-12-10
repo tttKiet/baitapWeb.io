@@ -79,7 +79,7 @@
                   </li>
 
                   <li class="item-link out">
-                    <span class="header-link">Thoát</span>
+                    <span class="header-link"><b>Thoát</b></span>
                   </li>
 
                   <li class="item-link store">
@@ -95,9 +95,11 @@
           <div class="container-detail">
             <div class="detail-content">
               <div class="detail-nav">
-                <span class="detail-nav-icon"
-                  ><i class="uil uil-arrow-left nav-icon"></i
-                ></span>
+                <span class="detail-nav-icon">
+                  <a href="./index.html">
+                    <i class="uil uil-arrow-left nav-icon"></i>
+                  </a>
+                </span>
                 <h1 class="title-product">
                   Giỏ hàng của bạn
                   <i class="uil uil-shopping-bag"></i>
@@ -129,7 +131,7 @@
                     <div class="right-content">
                       <div class="content-row">
                         <p class="sum-quantity">Số lượng sản phẩm:</p>
-                        <p class="sum-quantity-total"></p>
+                        <p class="sum-quantity-total">0</p>
                       </div>
                       <span class="line"></span>
                       <div class="content-row">
@@ -139,11 +141,13 @@
                       <span class="line"></span>
                       <div class="content-row">
                         <p class="sum-quantity">Tổng:</p>
-                        <p class="sum-total">8721</p>
+                        <p class="sum-total">0</p>
                       </div>
                       <span class="line"></span>
                       <div class="buy-now">
-                        <button id="myBtn" class="buy-btn btn-add">Mua ngay</button>
+                        <button id="myBtn" class="buy-btn btn-add">
+                          Mua ngay
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -160,22 +164,55 @@
               <h1>Đơn hàng của bạn</h1>
             </div>
             <div class="modal-body-cart">
-              <p>Tổng số lượng sản phẩm: <span>100</span></p>
-              <p>Tổng giá tiền: </p>
-              <p>Vui lòng nhập địa chỉ tại đây: <input class="modal-input" type="text" placeholder="Nhập địa chỉ của bạn ở đây"></p>
-              
+              <p>Tổng số lượng sản phẩm: <span class="total-modal">0</span></p>
+              <p>Tổng giá tiền: <span class="price-modal">0</span></p>
+              <p>
+                Vui lòng nhập địa chỉ tại đây:
+                <input
+                  class="modal-input-address"
+                  type="text"
+                  placeholder="Nhập địa chỉ của bạn ở đây"
+                />
+                <span class="er1 errorModal"></span>
+              </p>
+              <p>
+                Vui lòng nhập số điện thoại tại đây:
+                <input
+                  class="modal-input-phone"
+                  type="number"
+                  placeholder="Nhập số điện thoại của bạn ở đây"
+                />
+                <span class="er2 errorModal"></span>
+              </p>
             </div>
             <div class="modal-footer-cart">
               <div class="modal-footer-btn">
-                <button class="submit-cart-btn">Đặt hàng ngay</button>
+                <button id="btn-success" class="submit-cart-btn">
+                  Đặt hàng ngay
+                </button>
               </div>
             </div>
           </div>
-        
         </div>
+        <div id="modal-success" class="modal-success">
+          <!-- Modal content -->
+          <div class="modal-cart-success">
+            <div class="modal-header-cart">
+              <span class="close">&times;</span>
+              <h1>Đã đặt hàng thành công !</h1>
+            </div>
+            <p class="thank">
+              Cảm ơn bạn đã đặt hàng của chúng tôi, chúng tôi sẽ gửi kiện hàng
+              tới bạn trong thời gian sớm nhất.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="toast"></div>
     <!-- JS -->
+    <script src="./Js/toast.js"></script>
+    <script src="./Js/index.js"></script>
     <script src="./Js/giohang.js" type="module"></script>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
