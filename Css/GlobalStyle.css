@@ -50,6 +50,23 @@ a {
   transition: all ease-in-out 0.2s;
 }
 
+.manager::before,
+.manager::after {
+  display: none;
+}
+
+.manager {
+  user-select: none;
+}
+
+.manager:hover:before {
+  display: none;
+}
+
+.manager:hover:after {
+  display: none;
+}
+
 .title-header > p {
   padding: 4px 16px;
   border-bottom: 2px solid rgb(47, 47, 242);
@@ -179,6 +196,8 @@ a {
 .toast__massage-title {
   font-size: 1.6rem;
   font-weight: 400;
+  margin-bottom: 5px;
+  text-align: left;
   text-shadow: 1px 0 2px rgba(0, 0, 0, 0.355);
 }
 
@@ -196,6 +215,7 @@ a {
   margin-bottom: 0;
   font-size: 1.2rem;
   color: #000;
+  text-align: left;
   opacity: 0.8;
 }
 

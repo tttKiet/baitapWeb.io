@@ -475,6 +475,7 @@ main {
   font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: text;
 }
 
 .product-price {

@@ -10,6 +10,74 @@ body {
   color: #fff;
   font-family: "Quicksand", sans-serif;
   text-align: center;
+  position: relative;
+}
+
+.back {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  cursor: pointer;
+  padding: 16px;
+}
+
+.back > i {
+  font-size: 2.4rem;
+}
+
+.icon-toast {
+  font-size: 20px;
+  padding: 0 4px;
+  color: rgb(0, 0, 0);
+  margin-left: 22px;
+}
+
+.toast__massage-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-shadow: 1px 0 2px rgba(0, 0, 0, 0.355);
+}
+
+.toast__icon_close {
+  margin-right: 10px;
+  color: #000;
+}
+
+.toast__icon_close:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.toast__massage-content {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  color: #000;
+  opacity: 0.8;
+}
+
+.toast-success .toast__massage-title,
+.toast-success .icon-toast {
+  color: #000;
+}
+
+.toast-error {
+  position: relative;
+}
+
+.toast-error::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 6px;
+  height: 54px;
+  border-radius: 20px;
+  background-color: rgb(241, 0, 0);
+}
+
+.toast-error > .toast__icon > i {
+  background-color: rgb(241, 0, 0);
 }
 
 body a {

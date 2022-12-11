@@ -149,14 +149,14 @@ const renderBTN = () => {
           type: "success",
           title: "Đã thêm!",
           massage: "Vào giỏ hàng để xem sản phẩm",
-          duration: 4000,
+          duration: 1500,
         });
       } else {
         toast({
           type: "error",
           title: "Lỗi rồi!",
           massage: "Bạn phải đăng nhập để thêm vào giỏ hàng của mình!",
-          duration: 4000,
+          duration: 1500,
         });
       }
     });
@@ -171,20 +171,11 @@ const handleAddstore = () => {
 
 const viewDetailProduct = () => {
   const btnBuy = $$(".btn-buy");
-  btnBuy.forEach((e, index) => {
+  btnBuy.forEach((e) => {
     e.addEventListener("click", (i) => {
       const idItem = i.target.closest(".product").dataset.id;
-      if (checkUser()) {
-        localStorage.removeItem("detail-product");
-        localStorage.setItem("detail-product", idItem);
-      } else {
-        toast({
-          type: "error",
-          title: "Lỗi rồi!",
-          massage: "Bạn phải đăng nhập để xem được chi tiết sản phẩm này!",
-          duration: 4000,
-        });
-      }
+      localStorage.removeItem("detail-product");
+      localStorage.setItem("detail-product", idItem);
     });
   });
 };

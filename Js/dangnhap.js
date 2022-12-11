@@ -32,12 +32,12 @@ const register = (form) => {
           title: "Đăng nhập thành công!",
           type: "success",
           massage: "Chuyển trang sau vào giây",
-          duration: 2500,
+          duration: 1000,
         });
 
         setTimeout(() => {
           form.submit();
-        }, 2500);
+        }, 1000);
         break;
       }
     }
@@ -47,7 +47,7 @@ const register = (form) => {
         title: "Đăng nhập thất bại!",
         type: "error",
         massage: "Sai tên tài khoản hoặc mật khẩu",
-        duration: 4000,
+        duration: 2000,
       });
       email.focus();
     } else {
@@ -61,3 +61,14 @@ const register = (form) => {
   checkValidateUser();
   return false;
 };
+
+const cusRegister = () => {
+  const back = document.querySelector(".back");
+  if (back) {
+    back.onclick = () => {
+      history.back();
+    };
+  }
+};
+
+cusRegister();

@@ -32,8 +32,8 @@ function Products(products) {
                                 </span>
                             </div>
                             </div>
-                            <a href="#" class="product-name"
-                            >${item.name}</a
+                            <span  class="product-name"
+                            >${item.name}</span
                             >
                             <p class="product-price">$ ${item.rootPrice}</p>
                             <p class="product-price">$ ${item.price}</p>

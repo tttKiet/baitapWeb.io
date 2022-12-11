@@ -33,12 +33,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 24px 12px 0 12px;
+  height: 425px;
 }
 
 .img-product {
-  width: 520px;
-  height: 525px;
-  margin: 10px 10px 0px 0px;
+  object-fit: cover;
+  border-radius: 4px;
+  width: 420px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 10px 10px 10px;
 }

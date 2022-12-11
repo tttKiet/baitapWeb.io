@@ -78,6 +78,7 @@ const app = () => {
     }
   };
   const out = $(".out");
+
   if (out) {
     const user = $(".user");
     const avt = $(".avt");
@@ -88,7 +89,7 @@ const app = () => {
         title: "Đã đăng xuất!",
         type: "success",
         massage: "Thanks you for job",
-        duration: 2500,
+        duration: 1000,
       });
       window.localStorage.removeItem("curUser");
       user.style.display = "block";
@@ -99,6 +100,22 @@ const app = () => {
       }
     };
   }
+
+  const update = () => {
+    const manager = $(".manager");
+    if (manager) {
+      manager.onclick = () => {
+        toast({
+          type: "error",
+          title: "Chức năng đang được Update!",
+          massage: "Mời bạn vào lại sau",
+          duration: 2000,
+        });
+      };
+    }
+  };
+
+  update();
 };
 
 app();
