@@ -60,13 +60,21 @@ const app = () => {
       avtUser.src = JSON.parse(curUser).avt;
       user.style.display = "none";
       avt.style.display = "block";
-      out.style.display = "block";
-      store.style.display = "block";
+      if (out) {
+        out.style.display = "block";
+      }
+      if (store) {
+        store.style.display = "block";
+      }
     } else {
       user.style.display = "block";
       avt.style.display = "none";
-      out.style.display = "none";
-      store.style.display = "none";
+      if (out) {
+        out.style.display = "none";
+      }
+      if (store) {
+        store.style.display = "none";
+      }
     }
   };
   const out = $(".out");
@@ -86,7 +94,9 @@ const app = () => {
       user.style.display = "block";
       avt.style.display = "none";
       out.style.display = "none";
-      store.style.display = "none";
+      if (store) {
+        store.style.display = "none";
+      }
     };
   }
 };

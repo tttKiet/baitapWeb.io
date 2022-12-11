@@ -169,6 +169,26 @@ const handleAddstore = () => {
   renderBTN();
 };
 
+const viewDetailProduct = () => {
+  const btnBuy = $$(".btn-buy");
+  btnBuy.forEach((e, index) => {
+    e.addEventListener("click", (i) => {
+      const idItem = i.target.closest(".product").dataset.id;
+      if (checkUser()) {
+        localStorage.removeItem("detail-product");
+        localStorage.setItem("detail-product", idItem);
+      } else {
+        toast({
+          type: "error",
+          title: "Lỗi rồi!",
+          massage: "Bạn phải đăng nhập để xem được chi tiết sản phẩm này!",
+          duration: 4000,
+        });
+      }
+    });
+  });
+};
+
 // func main
 const productMain = () => {
   handleSearchCss();
@@ -178,6 +198,8 @@ const productMain = () => {
   handleBtnMenu();
   // Handle add store
   handleAddstore();
+  // details
+  viewDetailProduct();
 };
 
 productMain();

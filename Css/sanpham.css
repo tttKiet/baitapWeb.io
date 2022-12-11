@@ -31,6 +31,21 @@ main {
   display: none;
 }
 
+.details-item {
+  position: relative;
+}
+
+.details-item::before {
+  content: "";
+  top: -8px;
+  left: -25px;
+  display: block;
+  width: 200%;
+  height: 32px;
+  padding: 10px;
+  position: absolute;
+}
+
 .menu_filter::before {
   display: block;
   position: absolute;

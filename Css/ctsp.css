@@ -1,3 +1,12 @@
+.header {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.697),
+    transparent
+  );
+}
+
 .header-detail {
   position: relative;
 }
@@ -15,12 +24,23 @@
 }
 
 .detail-container {
+  margin-top: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
+.detail-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .img-product {
-  width: 90%;
+  width: 520px;
+  height: 525px;
+  margin: 10px 10px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 10px 10px 10px;
 }
 
 .container-detail {
@@ -119,6 +139,11 @@
   cursor: pointer;
 }
 
+.detail-nav-icon a {
+  text-decoration: none;
+  color: black;
+}
+
 .detail-nav-icon:hover {
   opacity: 0.6;
 }
@@ -133,7 +158,8 @@
 .star-index {
   position: absolute;
   color: #fff;
-  right: 25px;
+  right: 50%;
+  transform: translateX(50%);
   font-size: 20px;
   bottom: 15px;
 }

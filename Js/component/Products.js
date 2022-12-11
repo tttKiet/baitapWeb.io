@@ -16,7 +16,7 @@ function Products(products) {
                                     <span><i class="uil uil-plus"></i></span>
                                 </button>
                                 <button type="button" class="btn-buy">
-                                    <a href="#"> Mua ngay</a>
+                                    <a href="./chitietsp.html" class="details-item"> Xem chi tiết</a>
                                     <span><i class="uil uil-shopping-cart"></i></span>
                                 </button>
                                 </div>
