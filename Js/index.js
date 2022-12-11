@@ -43,6 +43,15 @@ const app = () => {
         headerLink[i].style.color = "#fff";
       }
     }
+
+    // Xu ly scroll
+    const totop = $("#totop");
+    if (yScroll > 200) {
+      totop.style.display = "block";
+      toTop();
+    } else {
+      totop.style.display = "none";
+    }
   });
 
   // Get user
@@ -111,6 +120,16 @@ const app = () => {
           massage: "Mời bạn vào lại sau",
           duration: 2000,
         });
+      };
+    }
+  };
+
+  const toTop = () => {
+    const totop = $("#totop");
+    if (totop) {
+      totop.onclick = () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       };
     }
   };

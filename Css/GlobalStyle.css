@@ -243,3 +243,42 @@ a {
 .toast-error > .toast__icon > i {
   background-color: rgb(241, 0, 0);
 }
+
+#totop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  color: var(--carribean-green);
+  z-index: 10000;
+  padding: 0 8px;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  display: none;
+  animation: totop 0.5s ease-in;
+}
+
+@keyframes totop {
+  from {
+    bottom: -5px;
+    right: -5px;
+  }
+  to {
+    bottom: 40px;
+    right: 40px;
+  }
+}
+
+#totop > i {
+  text-shadow: 0 0 5px #fff;
+  font-size: 28px;
+}
+
+#totop:hover {
+  background-color: #40c9a294;
+  box-shadow: 0 0 0 2px #f5f5f5;
+}
+
+#totop:hover#totop > i {
+  color: #fff;
+}
